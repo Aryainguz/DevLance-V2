@@ -1,5 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const axios = require("axios")
+const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
+const sgMail = require("@sendgrid/mail")
+const crypto = require('crypto')
+const cookieParser = require("cookie-parser")
+const mongoose = require("mongoose");
+const { response } = require("express");
 
 require("dotenv").config()
 const app = express();
@@ -11,7 +19,7 @@ app.use(express.static(__dirname +"/Public"));
 app.set('views', __dirname+'/views/');
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(cookieParser())
+app.use(cookieParser())
 
 // routes 
 
