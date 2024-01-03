@@ -30,6 +30,7 @@ const {verifyToken} = require('./controllers/verifyToken')
 const {getLogin} = require('./controllers/getLogin')
 const {postLogin} = require('./controllers/postLogin')
 const {logout} = require('./controllers/logout')
+const {devlanceClient} = require('./controllers/devlanceClient')
 
 app.get("/", getIndex)
 app.get("/register",getRegister)
@@ -38,6 +39,10 @@ app.get("/verify/:token",verifyToken)
 app.get("/login",getLogin)
 app.post("/login",postLogin)
 app.get("/logout",logout)
+
+app.get("/devlance/client",devlanceClient)
+
+
 
 
 
