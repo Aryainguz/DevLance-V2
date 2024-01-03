@@ -20,13 +20,15 @@ const {getRegister} = require('./routes/getRegister')
 const {postRegister} = require('./routes/postRegister')
 const {verifyToken} = require('./routes/verifyToken')
 const {getLogin} = require('./routes/getLogin')
+const {postLogin} = require('./routes/postLogin')
+
 
 app.get("/", getIndex)
 app.get("/register",getRegister)
 app.post("/register", postRegister)
 app.get("/verify/:token",verifyToken)
 app.get("/login",getLogin)
-
+app.post("/login",postLogin)
 
 
 
