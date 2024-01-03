@@ -10,7 +10,13 @@ app.use(express.static(__dirname +"/public"));
 app.set('views', __dirname+'/views/');
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser())
+// app.use(cookieParser())
+
+// routes 
+
+const {getIndex} = require('./routes/getIndex')
+
+app.get("/", getIndex)
 
 app.listen(port, () => {
     console.log(`Server ready at ${port}`)
