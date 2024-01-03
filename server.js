@@ -72,5 +72,5 @@ app.get("/devlance/profile/:username",getProfile)
 
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server ready at ${port}`)
+    console.log(`Server ready`)
 })
