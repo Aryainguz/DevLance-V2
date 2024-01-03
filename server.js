@@ -10,16 +10,24 @@ const mongoose = require("mongoose");
 const { response } = require("express");
 
 require("dotenv").config()
-const app = express();
 
-const port = process.env.PORT || 3000;
+const API_KEY = process.env.SENDGRID_API_KEY
+sgMail.setApiKey(API_KEY)
 
+const app = express()
 app.use(express.static(__dirname +"/Public"));
-
 app.set('views', __dirname+'/views/');
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser())
+
+//configuring database
+const  db = require("./database/db_config.js")
+db()
+
+//importing models
+const devlancer = require("./database/models")
+const post = require("./database/models")
 
 // routes 
 
@@ -33,7 +41,7 @@ const {logout} = require('./controllers/logout')
 const {devlanceClient} = require('./controllers/devlanceClient')
 const {devlanceTopDevs} = require('./controllers/devlanceTopDevs')
 const {devlanceDevDen} = require('./controllers/devlanceDevDen')
-const {postDevlanceMainDev} = require('./controllers/postDevlanceMainDev')
+const {postDevlanceMainDev} = require('./controllers/DevlanceMainDev')
 const {getDevlanceDevlancer} = require('./controllers/getDevlanceDevlancer')
 const {postDevVerify} = require('./controllers/postDevVerify')
 const {getDevVerify} = require('./controllers/getDevVerify')
@@ -62,7 +70,7 @@ app.get("/devlance/profile/:username",getProfile)
 
 
 
-
+const port = process.env.PORT || 3000;
 
 
 app.listen(port, () => {
