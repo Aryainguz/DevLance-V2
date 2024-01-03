@@ -35,8 +35,6 @@ const devlancer = require("./database/models")
 const post = require("./database/models");
 
 
-const port = "http://localhost:3000/";
-
 app.get("/", getIndex)
 
 app.get("/register",getRegister)
