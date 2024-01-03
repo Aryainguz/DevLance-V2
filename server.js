@@ -8,13 +8,14 @@ const crypto = require('crypto')
 const cookieParser = require("cookie-parser")
 const mongoose = require("mongoose");
 const { response } = require("express");
+const path = require("path");
 
 require("dotenv").config()
 
 const API_KEY = process.env.SENDGRID_API_KEY
 sgMail.setApiKey(API_KEY)
 const app = express()
-app.use(express.static(__dirname +"/Public"));
+app.use(express.static(path.join(__dirname +"/Public")));
 app.set('views', __dirname+'/views/');
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,7 +32,7 @@ const { devlanceClient, devlanceTopDevs, devlanceDevDen, postDevlanceMainDev, ge
 
 //importing models
 const devlancer = require("./database/models")
-const post = require("./database/models")
+const post = require("./database/models");
 
 
 const port = "http://localhost:3000/";
