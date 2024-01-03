@@ -31,6 +31,7 @@ const {getLogin} = require('./controllers/getLogin')
 const {postLogin} = require('./controllers/postLogin')
 const {logout} = require('./controllers/logout')
 const {devlanceClient} = require('./controllers/devlanceClient')
+const {devlanceTopDevs} = require('./controllers/devlanceTopDevs')
 
 app.get("/", getIndex)
 app.get("/register",getRegister)
@@ -41,6 +42,7 @@ app.post("/login",postLogin)
 app.get("/logout",logout)
 
 app.get("/devlance/client",devlanceClient)
+app.get("/devlance/topdevs",devlanceTopDevs)
 
 
 
