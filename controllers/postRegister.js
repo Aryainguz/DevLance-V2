@@ -1,3 +1,11 @@
+const {devlancer,post} = require("../database/models")
+const bcrypt = require("bcrypt")
+const sgMail = require("@sendgrid/mail")
+const crypto = require('crypto')
+
+
+
+
 exports.postRegister = async (req, res) => {
 
     const {email,linkedin,password1,password2,accountType} = req.body

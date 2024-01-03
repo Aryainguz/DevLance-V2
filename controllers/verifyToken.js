@@ -1,3 +1,6 @@
+const {devlancer} = require("../database/models")
+
+
 exports.verifyToken = async (req,res)=>{
     try{
         const user = await devlancer.findOneAndUpdate({verification_token:req.params.token}, { $set: { verified:true } })
