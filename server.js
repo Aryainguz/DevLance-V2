@@ -16,8 +16,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // routes 
 
 const {getIndex} = require('./routes/getIndex')
+const {getRegister} = require('./routes/getRegister')
+const {postRegister} = require('./routes/postRegister')
 
 app.get("/", getIndex)
+app.get("/register",getRegister)
+app.post("/register", postRegister)
+
 
 app.listen(port, () => {
     console.log(`Server ready at ${port}`)
