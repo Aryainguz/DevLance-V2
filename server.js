@@ -32,6 +32,14 @@ const {postLogin} = require('./controllers/postLogin')
 const {logout} = require('./controllers/logout')
 const {devlanceClient} = require('./controllers/devlanceClient')
 const {devlanceTopDevs} = require('./controllers/devlanceTopDevs')
+const {devlanceDevDen} = require('./controllers/devlanceDevDen')
+const {postDevlanceMainDev} = require('./controllers/postDevlanceMainDev')
+const {getDevlanceDevlancer} = require('./controllers/getDevlanceDevlancer')
+const {postDevVerify} = require('./controllers/postDevVerify')
+const {getDevVerify} = require('./controllers/getDevVerify')
+const {getDashboard} = require('./controllers/getDashboard')
+const {getProfile} = require('./controllers/getProfile')
+
 
 app.get("/", getIndex)
 app.get("/register",getRegister)
@@ -43,6 +51,14 @@ app.get("/logout",logout)
 
 app.get("/devlance/client",devlanceClient)
 app.get("/devlance/topdevs",devlanceTopDevs)
+app.get("/devlance/devden",devlanceDevDen)
+
+app.post("/devlance/mainDev",postDevlanceMainDev)
+app.get("/devlance/devlancer",getDevlanceDevlancer)
+app.post("/dev/verify",postDevVerify)
+app.get("/dev/verify",getDevVerify)
+app.get("/devlance/dashboard",getDashboard)
+app.get("/devlance/profile/:username",getProfile)
 
 
 
