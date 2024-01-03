@@ -18,10 +18,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const {getIndex} = require('./routes/getIndex')
 const {getRegister} = require('./routes/getRegister')
 const {postRegister} = require('./routes/postRegister')
+const {verifyToken} = require('./routes/verifyToken')
+const {getLogin} = require('./routes/getLogin')
 
 app.get("/", getIndex)
 app.get("/register",getRegister)
 app.post("/register", postRegister)
+app.get("/verify/:token",verifyToken)
+app.get("/login",getLogin)
+
+
 
 
 app.listen(port, () => {
