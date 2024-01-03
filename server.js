@@ -15,13 +15,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes 
 
-const {getIndex} = require('./routes/getIndex')
-const {getRegister} = require('./routes/getRegister')
-const {postRegister} = require('./routes/postRegister')
-const {verifyToken} = require('./routes/verifyToken')
-const {getLogin} = require('./routes/getLogin')
-const {postLogin} = require('./routes/postLogin')
-
+const {getIndex} = require('./controllers/getIndex')
+const {getRegister} = require('./controllers/getRegister')
+const {postRegister} = require('./controllers/postRegister')
+const {verifyToken} = require('./controllers/verifyToken')
+const {getLogin} = require('./controllers/getLogin')
+const {postLogin} = require('./controllers/postLogin')
+const {logout} = require('./controllers/logout')
 
 app.get("/", getIndex)
 app.get("/register",getRegister)
@@ -29,6 +29,8 @@ app.post("/register", postRegister)
 app.get("/verify/:token",verifyToken)
 app.get("/login",getLogin)
 app.post("/login",postLogin)
+app.get("/logout",logout)
+
 
 
 
