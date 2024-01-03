@@ -13,7 +13,6 @@ require("dotenv").config()
 
 const API_KEY = process.env.SENDGRID_API_KEY
 sgMail.setApiKey(API_KEY)
-
 const app = express()
 app.use(express.static(__dirname +"/Public"));
 app.set('views', __dirname+'/views/');
@@ -22,57 +21,57 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser())
 
 //configuring database
-const  db = require("./database/db_config.js")
+const  db = require("./database/db_confg")
 db()
+
+
+
+const {getRegister, postRegister,getIndex, verifyToken, getLogin, postLogin, logout} = require("./controllers/auth");
+const { devlanceClient, devlanceTopDevs, devlanceDevDen, postDevlanceMainDev, getDevlanceDevlancer, postDevVerify, getDevVerify, getDashboard, getProfile } = require("./controllers/devlance");
 
 //importing models
 const devlancer = require("./database/models")
 const post = require("./database/models")
 
-// routes 
 
-const {getIndex} = require('./controllers/getIndex')
-const {getRegister} = require('./controllers/getRegister')
-const {postRegister} = require('./controllers/postRegister')
-const {verifyToken} = require('./controllers/verifyToken')
-const {getLogin} = require('./controllers/getLogin')
-const {postLogin} = require('./controllers/postLogin')
-const {logout} = require('./controllers/logout')
-const {devlanceClient} = require('./controllers/devlanceClient')
-const {devlanceTopDevs} = require('./controllers/devlanceTopDevs')
-const {devlanceDevDen} = require('./controllers/devlanceDevDen')
-const {postDevlanceMainDev} = require('./controllers/DevlanceMainDev')
-const {getDevlanceDevlancer} = require('./controllers/getDevlanceDevlancer')
-const {postDevVerify} = require('./controllers/postDevVerify')
-const {getDevVerify} = require('./controllers/getDevVerify')
-const {getDashboard} = require('./controllers/getDashboard')
-const {getProfile} = require('./controllers/getProfile')
-
+const port = "http://localhost:3000/";
 
 app.get("/", getIndex)
+
 app.get("/register",getRegister)
+
 app.post("/register", postRegister)
+
 app.get("/verify/:token",verifyToken)
+
 app.get("/login",getLogin)
+
 app.post("/login",postLogin)
+
 app.get("/logout",logout)
 
+
+
 app.get("/devlance/client",devlanceClient)
+
 app.get("/devlance/topdevs",devlanceTopDevs)
+
 app.get("/devlance/devden",devlanceDevDen)
 
 app.post("/devlance/mainDev",postDevlanceMainDev)
+
 app.get("/devlance/devlancer",getDevlanceDevlancer)
+
+
 app.post("/dev/verify",postDevVerify)
+
 app.get("/dev/verify",getDevVerify)
+
 app.get("/devlance/dashboard",getDashboard)
+
 app.get("/devlance/profile/:username",getProfile)
 
 
-
-const port = process.env.PORT || 3000;
-
-
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Server ready at ${port}`)
 })
