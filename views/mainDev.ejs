@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="/js/index.js"></script>
+</head>
+
+<body class="bg-slate-700">
+
+    <div class="container">
+
+        <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar"
+            aria-controls="default-sidebar" type="button"
+            class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                </path>
+            </svg>
+        </button>
+
+
+        <aside id="default-sidebar"
+            class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+            aria-label="Sidebar">
+            <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <ul class="space-y-2 font-medium">
+                    <li>
+                        <a href="/devlance/devlancer"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 22 21">
+                                <path
+                                    d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                                <path
+                                    d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                            </svg>
+                            <span class="ml-3">DevLance</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/devlance/topdevs"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 18 18">
+                                <path
+                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                            </svg>
+                            <span class="flex-1 ml-3 whitespace-nowrap">DevLance's Top Devs</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/devlance/devden"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 18 18">
+                                <path
+                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                            </svg>
+                            <span class="flex-1 ml-3 whitespace-nowrap">Developers Den</span>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/logout"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                            </svg>
+                            <span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+        <div class=" my-6 mx-6">
+            <div class="flex flex-wrap items-start justify-end -mb-3">
+                <a href="/devlance/dashboard">
+                    <button
+                        class="inline-flex px-5 py-3 text-purple-600 hover:text-purple-700 focus:text-purple-700 hover:bg-purple-100 focus:bg-purple-100 border border-purple-600 rounded-md mb-3">
+                        <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="flex-shrink-0 h-5 w-5 -ml-1 mt-0.5 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                        Your Dashboard
+                    </button>
+                </a>
+                <a href="/devlance/client">
+                    <button
+                        class="inline-flex px-5 py-3 text-white bg-purple-600 hover:bg-purple-700 focus:bg-purple-700 rounded-md ml-6 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 47.41" style="width: 15%;">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #fff
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="layer_1-2" data-name="layer 1">
+                                    <path class="cls-1"
+                                        d="M33.71 47.41 32.29 46l3.3-3.29-3.3-3.3L33.71 38l4 4a1 1 0 0 1 0 1.41z" />
+                                    <path class="cls-1"
+                                        d="M21 41.71h16v2H21zM43.71 41.41 42.29 40l3.3-3.29-3.3-3.3L43.71 32l4 4a1 1 0 0 1 0 1.41zM25 35.71h6v2h-6z" />
+                                    <path class="cls-1"
+                                        d="M36 35.71h11v2H36zM4.29 15.41l-4-4a1 1 0 0 1 0-1.41l4-4 1.42 1.41-3.3 3.3L5.71 14zM17 9.71h6v2h-6z" />
+                                    <path class="cls-1"
+                                        d="M1 9.71h11v2H1zM14.29 9.41l-4-4a1 1 0 0 1 0-1.41l4-4 1.42 1.41-3.3 3.3L15.71 8z" />
+                                    <path class="cls-1"
+                                        d="M12 3.71h15v2H12zM36 27.71a12 12 0 1 1 12-12 12 12 0 0 1-12 12zm0-22a10 10 0 1 0 10 10 10 10 0 0 0-10-10z" />
+                                    <path class="cls-1"
+                                        d="M36 18.71c-2.21 0-4-2.25-4-5a3.71 3.71 0 0 1 4-4 3.71 3.71 0 0 1 4 4c0 2.75-1.79 5-4 5zm0-7c-1.79 0-2 1.14-2 2 0 1.59.93 3 2 3s2-1.41 2-3c0-.86-.21-2-2-2z" />
+                                    <path class="cls-1"
+                                        d="M43 24.71h-2V20.4a1 1 0 0 0-.83-1L36 18.72l-4.17.7a1 1 0 0 0-.83 1v4.31h-2V20.4a3 3 0 0 1 2.51-3l4.33-.72a.86.86 0 0 1 .32 0l4.33.72a3 3 0 0 1 2.51 3zM12 43.71a12 12 0 1 1 12-12 12 12 0 0 1-12 12zm0-22a10 10 0 1 0 10 10 10 10 0 0 0-10-10z" />
+                                    <path class="cls-1"
+                                        d="M12 33.71c-2.21 0-4-2.25-4-5a3.71 3.71 0 0 1 4-4 3.71 3.71 0 0 1 4 4c0 2.75-1.79 5-4 5zm0-7c-1.79 0-2 1.14-2 2 0 1.59.93 3 2 3s2-1.41 2-3c0-.86-.21-2-2-2z" />
+                                    <path class="cls-1"
+                                        d="M19 40.71h-2V35.4a1 1 0 0 0-.83-1L12 33.72l-4.17.7a1 1 0 0 0-.83 1v5.31H5V35.4a3 3 0 0 1 2.51-3l4.33-.72a.86.86 0 0 1 .32 0l4.33.72a3 3 0 0 1 2.51 3z" />
+                                    <path class="cls-1" d="M11 35.71h2v2h-2zM11 38.71h2v2h-2z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <p style="margin: 20px; font-size:large;">Switch as client</p>
+                    </button></a>
+            </div>
+        </div>
+        <div class="p-4 sm:ml-64">
+            <div class="mr-6">
+
+                <h2 class="text-white ml-0.5">Find exciting work and sync up with visionary clients on DevLance</h2>
+            </div> <br>
+            <br>
+            <div class="w-11/12 md:w-6/12 sm:w-9/12 bg-gray-800 rounded-2xl transform -translate-y-5 mt-6 shadow-xl"
+                style="margin: auto;" style="border: none;outline: none;">
+                <section class="p-3 ">
+
+                </section>
+                <section class="w-full flex px-3 py-2 " style="border: none;outline: none;">
+                    <div class="mr-1">
+
+                    </div>
+                    <div class="flex-1" style="border: none;outline: none;">
+                        <form action="/devlance/mainDev" method="post">
+                            <textarea style="border: none;"
+                                class="w-full p-2 bg-gray-800 focus:ring-0  outline-none placeholder-gray-400 text-white resize-none"
+                                rows="6" placeholder="Post something clients might interest!" name="blog"></textarea>
+                            <div class="flex items-center justify-end pt-2 ">
+                                <div>
+                                    <button
+                                        class="transition duration-500 ease-in-out bg-blue-500  hover:bg-opacity-100 text-white hover:text-opacity-100 py-2 px-3 rounded-full text-base font-bold focus:outline-none"
+                                        type="submit">&nbsp; Post &nbsp;</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+        </section>
+    </div>
+
+
+
+    <button type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Your
+        Posts</button>
+    <div class="w-11/12 md:w-6/12 sm:w-9/12 bg-gray-900 rounded-2xl transform -translate-y-5 mt-6"
+        style="margin:auto;display: none;">
+        <section class="p-3 ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 hover:text-blue-400 cursor-pointer"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </section>
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>
