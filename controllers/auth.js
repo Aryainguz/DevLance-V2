@@ -38,7 +38,7 @@ exports.postRegister = async (req, res) => {
                 const photo = "/assets/images/client.jpg"
                 await devlancer.create({email:email,linkedin:linkedin,password:hashedPass,accountType:accountType,verification_token:token,photo:photo});
 
-                verification_link = `http://localhost:3000/verify/${token}`
+                verification_link = `https://devlance-by-the-xiting-way.onrender.com/verify/${token}`
                 const message = {
                     to : email,
                     from : 'aryans12345678@gmail.com',
