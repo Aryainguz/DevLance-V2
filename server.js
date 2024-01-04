@@ -16,7 +16,7 @@ const API_KEY = process.env.SENDGRID_API_KEY
 sgMail.setApiKey(API_KEY)
 const app = express()
 
-app.use(express.static('/Public'));
+app.use(express.static('Public'));
 
 app.set('views', __dirname+'/views/');
 app.set("view engine", "ejs");
