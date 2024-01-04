@@ -23,7 +23,7 @@ Hey Team HackHurricane, Team The Xiting Way here,
 2. write node app.js to run the app on localhost:3000
 3. When running DevLance on local environment email verification link will be of   so please update it with localhost:3000 to use locally
 
-**We made this with ❤️ for HackHurricane 1.0 **
+### We made this with ❤️ for HackHurricane 1.0 
 
 ## App Link : https://devlance.onrender.com
 
