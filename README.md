@@ -1,5 +1,3 @@
-Hey Team HackHurricane, Team The Xiting Way here,
-
 **This is a NodeJS, ExpressJs, EJS, and MongoDB Project**
 
 ***The Name of the project is DevLance which is a Developer's only open souce freelance platform.***
@@ -23,9 +21,5 @@ Hey Team HackHurricane, Team The Xiting Way here,
 2. write node app.js to run the app on localhost:3000
 3. When running DevLance on local environment email verification link will be of   so please update it with localhost:3000 to use locally
 
-### We made this with ❤️ for HackHurricane 1.0 
 
 ## App Link : https://devlance.onrender.com
-
-Thanks, 
-Team The Xiting Way (www.TheXitingWay.com)
